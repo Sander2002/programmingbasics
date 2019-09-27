@@ -1,4 +1,4 @@
-let Grade = 8;
+let Grade = 7;
 
 if (Grade < 6) {
     console.log("Onvoldoende");
@@ -12,18 +12,18 @@ if (Grade < 6) {
 
 
 
-switch (Grade) {
-    case (Grade >= 9 && Grade < 10):
-        console.log("Uitmuntend");
-        break;
-    case (Grade >= 7 && Grade < 9):
-        console.log("Goed");
+switch (true) {
+    case (Grade < 6):
+        console.log("Onvoldoende");
         break;
     case (Grade >= 6 && Grade < 7):
         console.log("Voldoende");
         break;
-    case (Grade < 6):
-        console.log("Onvoldoende");
+    case (Grade >= 7 && Grade < 9):
+        console.log("Goed");
+        break;
+    case (Grade >= 9 && Grade <= 10):
+        console.log("Uitmuntend");
         break;
     default:
         console.log("Deze ken ik niet")
@@ -36,12 +36,17 @@ let purchasedBook = true;
 let job = "teacher";
 let inTrain = true;
 
-if(purchasedBook == true && job == "teacher" && inTrain == true){
+if(purchasedBook && job == "teacher" && inTrain){
     console.log("Je kan eindelijk je boek lezen.");
-}  if(purchasedBook == false){
-    console.log("Je hebt het boek niet gekocht.")
-} if(job !== "teacher"){
-    console.log("Je bent geen leraar.")
-} if(inTrain == false){
-    console.log("Je bent niet in de trein.")
+} else {
+    console.log("Je kan geen boek lezen.");
 }
+
+
+// if(purchasedBook == false){
+//     console.log("Je hebt het boek niet gekocht.")
+// } if(job !== "teacher"){
+//     console.log("Je bent geen leraar.")
+// } if(inTrain == false){
+//     console.log("Je bent niet in de trein.")
+// }
